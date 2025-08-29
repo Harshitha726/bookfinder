@@ -15,7 +15,7 @@ function App() {
     { title: "Compiler Design", author: "Alfred V. Aho", year: "2006" },
   ];
   
-  // 🔎 Search function (supports multiple words)
+  // 🔎 Search function (title + author)
   const searchBooks = () => {
     if (query === "") {
       setBooks([]);
@@ -25,8 +25,11 @@ function App() {
     // Split input into words
     const searchWords = query.toLowerCase().split(" ");
 
-    const filtered = cseBooks.filter((book) =>
-      searchWords.some((word) => book.title.toLowerCase().includes(word))
+    const filtered = CSEBooks.filter((book) =>
+      searchWords.some((word) =>
+        book.title.toLowerCase().includes(word) ||
+        book.author.toLowerCase().includes(word)   // ✅ also check author
+      )
     );
 
     setBooks(filtered);
@@ -41,7 +44,7 @@ function App() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search 2 books... e.g. Java Compiler"
+          placeholder="Search by title or author... e.g. Java / Herbert"
         />
         <button onClick={searchBooks}>Search</button>
       </div>
