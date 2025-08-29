@@ -1,0 +1,73 @@
+/* 🎨 Super simple but modern CSS */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 8px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #444;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.no-books {
+  font-style: italic;
+  color: #333;
+}
